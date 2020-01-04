@@ -19,9 +19,68 @@ class GildedRose {
     }
 
     public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
-            if (!items[i].name.equals(AGED_BRIE)
-                    && !items[i].name.equals(BACKSTAGE_PASSES)) {
+
+        for(Item item : this.items) {
+            switch(item.name) {
+                case AGED_BRIE:
+                    if (item.quality < HIGH_QUALITY) {
+                        item.quality = item.quality + 1;
+                    }
+                    // lelengo if-else
+                    item.sellIn = item.sellIn - 1;
+                    if (item.sellIn < MIN_SELLIN) {
+                        if (item.quality < HIGH_QUALITY) {
+                            item.quality = item.quality + 1;
+                        }
+                    }
+                    break;
+                case BACKSTAGE_PASSES:
+                    if (item.quality < HIGH_QUALITY) {
+
+                        item.quality = item.quality + 1;
+                        if (item.sellIn < HIGH_SELLIN) {
+                            if (item.quality < HIGH_QUALITY) {
+                                item.quality = item.quality + 1;
+                            }
+                        }
+
+                        if (item.sellIn < MEDIUM_SELLIN) {
+                            if (item.quality < HIGH_QUALITY) {
+                                item.quality = item.quality + 1;
+                            }
+                        }
+                    }
+                    // lelengo if-else
+                    item.sellIn = item.sellIn - 1;
+                    if (item.sellIn < MIN_SELLIN) {
+                        item.quality = item.quality - item.quality;
+                    }
+                    break;
+                case SULFURAS:
+                    if (item.sellIn < MIN_SELLIN) {
+
+                    }
+                    break;
+                default:
+                    if (item.quality > MIN_QUALITY) {
+                        item.quality = item.quality - 1;
+                    }
+                    // lelengo if-else
+                    item.sellIn = item.sellIn - 1;
+                    if (item.sellIn < MIN_SELLIN) {
+                        if (item.quality > MIN_QUALITY) {
+                            if (!item.name.equals(SULFURAS)) {
+                                item.quality = item.quality - 1;
+                            }
+                        }
+                    }
+                    break;
+            }
+        }
+
+
+       /* for (int i = 0; i < items.length; i++) {
+            if (!items[i].name.equals(AGED_BRIE) && !items[i].name.equals(BACKSTAGE_PASSES)) {
                 if (items[i].quality > MIN_QUALITY) {
                     if (!items[i].name.equals(SULFURAS)) {
                         items[i].quality = items[i].quality - 1;
@@ -46,7 +105,6 @@ class GildedRose {
                     }
                 }
             }
-
             if (!items[i].name.equals(SULFURAS)) {
                 items[i].sellIn = items[i].sellIn - 1;
             }
@@ -68,6 +126,6 @@ class GildedRose {
                     }
                 }
             }
-        }
+        } */
     }
 }
