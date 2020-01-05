@@ -1,4 +1,4 @@
-package tv.codely.kata.gildedrose;
+package src.src.main.java.tv.codely.kata.gildedrose;
 
 public class Item {
 

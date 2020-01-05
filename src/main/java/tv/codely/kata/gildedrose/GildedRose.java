@@ -1,4 +1,4 @@
-package tv.codely.kata.gildedrose;
+package src.src.main.java.tv.codely.kata.gildedrose;
 
 class GildedRose {
     Item[] items;
@@ -57,9 +57,6 @@ class GildedRose {
                     }
                     break;
                 case SULFURAS:
-                    if (item.sellIn < MIN_SELLIN) {
-
-                    }
                     break;
                 default:
                     if (item.quality > MIN_QUALITY) {
@@ -69,9 +66,8 @@ class GildedRose {
                     item.sellIn = item.sellIn - 1;
                     if (item.sellIn < MIN_SELLIN) {
                         if (item.quality > MIN_QUALITY) {
-                            if (!item.name.equals(SULFURAS)) {
                                 item.quality = item.quality - 1;
-                            }
+
                         }
                     }
                     break;
