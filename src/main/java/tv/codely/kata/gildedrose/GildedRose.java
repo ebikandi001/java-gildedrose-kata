@@ -1,22 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-class GildedRose {
-    Item[] items;
-
-    private static final String AGED_BRIE = "Aged Brie";
-    private static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
-    private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
-
-    private static final int MIN_QUALITY = 0;
-    private static final int HIGH_QUALITY = 50;
-
-    private static final int MIN_SELLIN = 0;
-    private static final int MEDIUM_SELLIN = 6;
-    private static final int HIGH_SELLIN = 11;
-
-    public GildedRose(Item[] items) {
-        this.items = items;
-    }
+final class GildedRose {
 
     public void updateQuality() {
 

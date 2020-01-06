@@ -1,6 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-public class BackstagePasses extends UpdatableItem {
+public final class BackstagePasses extends UpdatableItem {
 
     private static final int MIN_SELLIN = 0;
     private static final int MEDIUM_SELLIN = 6;

@@ -1,6 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-public class DefaultItem  extends UpdatableItem{
+public final class DefaultItem  extends UpdatableItem{
 
     private static final int MIN_QUALITY = 0;
 

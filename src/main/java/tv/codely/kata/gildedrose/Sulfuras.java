@@ -1,6 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-public class Sulfuras extends UpdatableItem {
+public final class Sulfuras extends UpdatableItem {
 
     Sulfuras(Item item){
         super(item);

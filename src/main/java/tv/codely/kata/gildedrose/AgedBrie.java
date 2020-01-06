@@ -1,6 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-public class AgedBrie extends UpdatableItem {
+public final class AgedBrie extends UpdatableItem {
 
     private static final int MIN_SELLIN = 0;
 
