@@ -9,24 +9,20 @@ public final class UpdatableItemFactory {
     private static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
     private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
 
-    static UpdatableItem basedOn(Item item) {
+    public static UpdatableItem basedOn(Item item) {
         switch(item.name) {
             case AGED_BRIE:
                 return new AgedBrie(item);
-                break;
             case BACKSTAGE_PASSES:
                 return new BackstagePasses(item);
-                break;
             case SULFURAS:
                 return new Sulfuras(item);
-                break;
             default:
-                return new DefaultItem((item);
-                break;
+                return new DefaultItem(item);
         }
     }
 
-    static List<UpdatableItem> basedOn(List<Item> items) {
+    public static List<UpdatableItem> basedOn(List<Item> items) {
         return items.stream().map(UpdatableItemFactory::basedOn).collect(toList());
     }
 }

@@ -1,6 +1,6 @@
 package src.main.java.tv.codely.kata.gildedrose;
 
-abstract class UpdatableItem extends Item {
+abstract public class UpdatableItem extends Item {
     private static final int MAX_QUALITY = 50;
     private static final int MIN_QUALITY = 0;
 
