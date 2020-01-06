@@ -1,4 +1,4 @@
-package tv.codely.kata.gildedrose;
+package src.test.java.tv.codely.kata.gildedrose;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

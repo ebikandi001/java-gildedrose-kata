@@ -1,4 +1,4 @@
-package src.src.main.java.tv.codely.kata.gildedrose;
+package src.main.java.tv.codely.kata.gildedrose;
 
 public class AgedBrie extends UpdatableItem {
 

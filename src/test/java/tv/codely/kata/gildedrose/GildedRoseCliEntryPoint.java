@@ -1,4 +1,4 @@
-package tv.codely.kata.gildedrose;
+package src.test.java.tv.codely.kata.gildedrose;
 
 public class GildedRoseCliEntryPoint {
     public static void main(String[] args) {

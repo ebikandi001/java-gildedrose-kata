@@ -1,4 +1,4 @@
-package src.src.main.java.tv.codely.kata.gildedrose;
+package src.main.java.tv.codely.kata.gildedrose;
 
 class GildedRose {
     Item[] items;
